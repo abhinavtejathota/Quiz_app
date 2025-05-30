@@ -1,7 +1,7 @@
 [
   {
-    "question": "What is the capital of France?",
-    "options": ["Paris", "Berlin", "Rome", "Madrid"],
+    "question": "What is the capital of Japan?",
+    "options": ["Tokyo", "Berlin", "Rome", "Madrid"],
     "correctOption": 0
   },
   {
@@ -30,8 +30,8 @@
     "correctOption": 0
   },
   {
-    "question": "What year was JavaScript launched?",
-    "options": ["1996", "1995", "1994", "None of the above"],
+    "question": "What port does HTTPS use?",
+    "options": ["80", "443", "23", "21"],
     "correctOption": 1
   },
   {
@@ -40,8 +40,8 @@
     "correctOption": 1
   },
   {
-    "question": "What is 2 + 2?",
-    "options": ["3", "4", "5", "22"],
+    "question": "What is 5!?",
+    "options": ["110", "120", "24", "720"],
     "correctOption": 1
   },
   {
