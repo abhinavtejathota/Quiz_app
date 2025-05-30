@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import questionsData from "./questions.json";
 import "./App.css";
 
-const QUIZ_DURATION = 120; // total time in seconds
+const QUIZ_DURATION = 120;
 
 const App = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -25,7 +25,7 @@ const App = () => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          handleSubmit(); // it's safe here
+          handleSubmit(); 
           return 0;
         }
         return prev - 1;
