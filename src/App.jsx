@@ -25,7 +25,7 @@ const App = () => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          handleSubmit(); 
+          handleSubmit();
           return 0;
         }
         return prev - 1;
@@ -146,25 +146,22 @@ const App = () => {
           <h2>
             🎉 You scored {score} / {questionsData.length}
           </h2>
-          {questionsData.map((q, index) => (
-            <div key={index} className="result-item">
-              <p className="result-question">
-                {index + 1}. {q.question}
-              </p>
-              <p
-                className={
-                  answers[index] === q.correctOption ? "correct" : "incorrect"
-                }
-              >
-                Your answer: {q.options[answers[index]] || "None"}
-              </p>
-              {answers[index] !== q.correctOption && (
+          {questionsData.map((q, index) => {
+            if (answers[index] === q.correctOption) return null;
+            return (
+              <div key={index} className="result-item">
+                <p className="result-question">
+                  {index + 1}. {q.question}
+                </p>
+                <p className="incorrect">
+                  Your answer: {q.options[answers[index]] || "None"}
+                </p>
                 <p className="correct-answer">
                   Correct answer: {q.options[q.correctOption]}
                 </p>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       )}
     </div>
